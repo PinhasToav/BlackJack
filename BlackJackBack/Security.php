@@ -66,7 +66,9 @@ class Security {
      * @return boolean      true if the word is valid, otherwise false.
      */
     public static function validate_string($word){
-        return preg_match("/^[a-zA-Z ]*$/", $word);
+        if( !preg_match("/^[a-zA-Z ]*$/", $word)) {
+            throw new BlackJackException('The data is not string');
+        }
     }
 
     /**
