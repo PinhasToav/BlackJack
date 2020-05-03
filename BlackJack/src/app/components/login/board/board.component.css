@@ -1,0 +1,191 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 72px;
+  background: -webkit-linear-gradient(#FF0000, #CD5C5C, #FFB6C1 , #CD5C5C , #CD5C5C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0px !important;
+}
+
+h2{
+  color: lightslategray;
+}
+
+h3{
+  color: lightslategray;
+}
+
+.btn {
+  flex: 1 1 auto;
+  margin: 1%;
+  padding: 1%;
+  text-align: center;
+  transition: 0.3s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-position: right center; /* change the direction of the change here */
+}
+
+.btn-1 {
+  background-image: linear-gradient(to right, #FF4500 0%, #FF0000 35%, #ccff66 100%);
+}
+
+.head_line {
+  text-align: center;
+}
+
+#entrance_fee_form{
+  padding-top: 3%;
+}
+
+#entrance_fee_span{
+  padding-right: 2%;
+}
+
+#card_back{
+  position: absolute;
+  left: 58%;
+  top: 2%;
+}
+
+#chips_table{
+  height : 110px;
+  width : 110px;
+  position: absolute;
+  left: 40%;
+  top: 1%;
+}
+
+#dealer_back{
+  opacity: 0%;
+  position: absolute;
+  animation-name: dealer_back;
+  animation-duration: 1s;
+}
+
+#player_back{
+  opacity: 0%;
+  position: absolute;
+  animation-name: player_back;
+  animation-duration: 1s;
+}
+
+#virtual_back{
+  opacity: 0%;
+  position: absolute;
+  animation-name: virtual_back;
+  animation-duration: 1s;
+}
+
+/* BACK CARDS ANIMATION */
+@keyframes dealer_back {
+  0%   {left: 58%; top: 2%; opacity: 100%}
+  100% {left: 47%; top: 1%; opacity: 0%}
+}
+
+@keyframes player_back {
+  0%   {left: 58%; top: 2%; opacity: 100%}
+  100% {left: 37%; top: 43%; opacity: 0%}
+}
+
+@keyframes virtual_back {
+  0%   {left: 58%; top: 2%; opacity: 100%}
+  100% {left: 53%; top: 43%; opacity: 0%}
+}
+
+#dealer_chips{
+  height : 110px;
+  width : 110px;
+  opacity: 0%;
+  position: absolute;
+  animation-name: dealer_chips;
+  animation-duration: 1s;
+}
+
+#player_chips{
+  height : 110px;
+  width : 110px;
+  opacity: 0%;
+  position: absolute;
+  animation-name: player_chips;
+  animation-duration: 1s;
+}
+
+#virtual_chips{
+  height : 110px;
+  width : 110px;
+  opacity: 0%;
+  position: absolute;
+  animation-name: virtual_chips;
+  animation-duration: 1s;
+}
+
+/* CHIPS ANIMATION */
+@keyframes dealer_chips {
+  0%   {left: 40%; top: 2%; opacity: 100%}
+  100% {left: 40%; top: 3%; opacity: 0%}
+}
+
+@keyframes player_chips {
+  0%   {left: 40%; top: 2%; opacity: 100%}
+  100% {left: 32%; top: 20%; opacity: 0%}
+}
+
+@keyframes virtual_chips {
+  0%   {left: 40%; top: 2%; opacity: 100%}
+  100% {left: 62%; top: 20%; opacity: 0%}
+}
+
+#player_chips_span{
+  position: absolute;
+  left: 34%;
+  top: 38%;
+  color: white;
+}
+
+#virtual_chips_span{
+  position: absolute;
+  left: 64%;
+  top: 38%;
+  color: white;
+}
+
+#dealer_chips_span{
+  position: absolute;
+  left: 42%;
+  top: 19%;
+  color: white;
+}
+
+#table{
+  position:relative;
+}
+
+#playing_buttons{
+  display: none;
+  padding-top: 4%;
+  padding-bottom: 1%;
+}
+
+.btn_with_logo{
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 5px 10px;
+  font-size: 35px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.btn_with_logo:hover {
+  background-color: lightgrey;
+}

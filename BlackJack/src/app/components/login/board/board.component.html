@@ -1,0 +1,52 @@
+<body>
+  <navbar></navbar>
+  <div id="main_div">
+    <!-- Head -->
+    <div class="head_line">
+      <h1>BlackJack</h1>
+
+      <!-- Entrance fee form -->
+      <div id="entrance_fee_form">
+        <span id="entrance_fee_span"><b>Hello {{players[0].full_name}}</b></span>
+        <input min="1" max="50"
+               required
+               type="number" placeholder="1-50"
+               id="entrance_fee_input"
+        />
+        <button (click)="entranceFeeEntered()" class="btn btn-1" id="entrance_fee_btn">Submit Entrance Fee</button>
+      </div>
+
+      <!-- Playing buttons form, by default display='none' -->
+      <div id="playing_buttons">
+        <button (click)="hit()" class="btn_with_logo"><i class="fas fa-hand-point-up" aria-hidden="true" title="HIT"></i></button>
+        <button (click)="stand()" class="btn_with_logo"><i class="fas fa-hand-paper" aria-hidden="true" title="STAND"></i></button>
+        <button (click)="split()" class="btn_with_logo"><i class="fas fa-hands" aria-hidden="true" title="SPLIT"></i></button>
+        <button (click)="double()" class="btn_with_logo"><i class="fas fa-hand-peace" aria-hidden="true" title="DOUBLE"></i></button>
+        <button (click)="surrender()" class="btn_with_logo"><i class="fas fa-trash-alt" aria-hidden="true" title="SURRENDER"></i></button>
+      </div>
+
+
+      <!-- Image of the game table -->
+      <div id="table">
+        <!-- Table image -->
+        <img src="../../../../assets/images/game/game_table/table.jpg" id="table_image"/>
+        <!-- The card back on the table, always there! -->
+        <img src="../../../../assets/images/game/cards_back/gray.jpg" id="card_back"/>
+        <!-- Sack of chips on the table, always there! -->
+        <img src="../../../../assets/images/game/chips/chips.png" id="chips_table"/>
+        <!-- The animation of the cards moving for each player -->
+        <img *ngIf="this.players[0].hand[0]?.length > 0" src="../../../../assets/images/game/cards_back/gray.jpg" id="player_back"/>
+        <img *ngIf="this.players[1].hand[0]?.length > 0" src="../../../../assets/images/game/cards_back/gray.jpg" id="virtual_back"/>
+        <img *ngIf="this.players[2].hand[0]?.length > 0" src="../../../../assets/images/game/cards_back/gray.jpg" id="dealer_back"/>
+
+        <!-- The animation of the chips moving for each player -->
+        <img *ngIf="this.players[0].bet[0] > 0" src="../../../../assets/images/game/chips/chips.png" id="player_chips"/>
+        <span id="player_chips_span"></span>
+        <img *ngIf="this.players[1].bet[0] > 0" src="../../../../assets/images/game/chips/chips.png" id="virtual_chips"/>
+        <span id="virtual_chips_span"></span>
+        <img *ngIf="this.players[2].bet[0] > 0" src="../../../../assets/images/game/chips/chips.png" id="dealer_chips"/>
+        <span id="dealer_chips_span"></span>
+      </div>
+    </div>
+  </div>
+</body>

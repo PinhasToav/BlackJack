@@ -1,0 +1,57 @@
+<body>
+  <!-- Login -->
+  <div class="login-page" *ngIf="!isRegister">
+    <form class="form">
+      <input pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+             required
+             type="text" placeholder="email"
+             id="login_email"
+      />
+      <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+             required
+             type="password" placeholder="password"
+             id="login_password"
+      />
+      <button id="login_button" (click)="callBackendLogin()">login</button>
+      <p class="message">Not registered? <a (click)="clickedRegister()">Create an account</a></p>
+    </form>
+  </div>
+
+  <!-- Register -->
+  <div class="login-page" *ngIf="isRegister">
+    <form class="form">
+      <input pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+             required
+             type="text" placeholder="email"
+             id="register_email"
+      />
+      <input pattern="[A-Za-z ]{1,32}"
+             required
+             title="Must contain only characters"
+             type="text" placeholder="full name"
+             id="register_full_name"
+      />
+      <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+             required
+             title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+             type="password" placeholder="password"
+             id="register_password1"
+      />
+      <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+             required
+             title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+             type="password" placeholder="password"
+             id="register_password2"
+      />
+      <input pattern="^(?:1[01][0-9]|120|1[8-9]|[2-9][0-9])$"
+             required
+             title="Must be older then 18 years old"
+             type="text" placeholder="age"
+             id="register_age"
+      />
+      <button id="register_button" (click)="callBackendRegister()">register</button>
+      <p class="message">Registered already? <a (click)="clickedRegister()">Log in</a></p>
+    </form>
+  </div>
+</body>
+
