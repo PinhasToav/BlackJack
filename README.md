@@ -15,9 +15,10 @@ To run the application you will need:
 2. in you'r 'hosts' file, add this line: 127.0.0.1		blackjack.com
 3. set you'r SQL using the .sql file.
 4. run the apache and sql server using xampp.
-5. navigate to the 'blackjack' folder in the 'htdocs' using any cmd, and write
+5. navigate to the 'blackjack' folder in the 'htdocs' using any cmd, and write:
 
     'npm install --save-dev @angular-devkit/build-angular' to install @angular-devkit/build-angular as dev dependency.
+    
     'npm serve' to run the angular.
 6. enter you'r browser and write 127.0.0.1:4200 in the url line.
 
