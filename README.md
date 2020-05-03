@@ -8,8 +8,10 @@ The game support two players and dealer:
 One player will be you, other one will be Virtual player and dealer which is virtual as well.
 
 
-To run the application you will need: (Because I have worked with apache server using xampp I will explain the installation as I did) 
-1. clone the files into 'htdocs' folder in the xampp.
+Notice: Because I have worked with apache server using xampp I will explain the installation as I did,
+
+To run the application you will need: 
+1. clone the files into 'htdocs' folder in the xampp. Move the files that are inside 'htdocs/blackjack' to 'htdocs'.
 2. in you'r 'hosts' file, add this line: 127.0.0.1		blackjack.com
 3. set you'r SQL using the .sql file.
 4. run the apache and sql server using xampp.
