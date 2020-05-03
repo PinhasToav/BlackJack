@@ -321,7 +321,7 @@ class ControllerPlayer extends Controller {
     }
 
     /**
-     * User choose to `SURRENDER`.
+     * User choose to `SPLIT`.
      */
     public function split() {
         /* Validate data */
