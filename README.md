@@ -20,6 +20,8 @@ To run the application you will need:
     'npm install --save-dev @angular-devkit/build-angular' to install @angular-devkit/build-angular as dev dependency.
     
     'npm serve' to run the angular.
+    
+    (Next time you run the application just type 'npm start' instead.)
 6. enter you'r browser and write 127.0.0.1:4200 in the url line.
 
 That's all!
